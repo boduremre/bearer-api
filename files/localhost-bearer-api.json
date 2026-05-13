@@ -1,0 +1,92 @@
+{
+  "version": 6,
+  "entities": [
+    {
+      "entity": {
+        "type": "Project",
+        "id": "ad5bee80-3c46-4b5a-aa44-ef87ba758af8",
+        "name": "bearer-api"
+      },
+      "children": [
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+              "name": "GET"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": "{\n  \"email\": \"test@example.com\",\n  \"password\": \"123456789\"\n}"
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": []
+              },
+              "scheme": {
+                "name": "http",
+                "version": "V11"
+              },
+              "host": "127.0.0.1:8000",
+              "path": "/api/posts"
+            },
+            "id": "eaea8f69-b61d-48a9-a930-33100a5e221b",
+            "name": "localhost-posts",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Authorization",
+                "value": " Bearer 1|7AkYegiATdC0mSrkFKnHOf3oG1lq97y5hstH9XbI37b3fc03"
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+              "name": "GET"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": "{\n  \"email\": \"test@example.com\",\n  \"password\": \"123456789\"\n}"
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": []
+              },
+              "scheme": {
+                "name": "http",
+                "version": "V11"
+              },
+              "host": "127.0.0.1:8000",
+              "path": "/api/users"
+            },
+            "id": "10966fd0-993c-4e93-88f4-4279ad8d608f",
+            "name": "localhost-users",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Authorization",
+                "value": " Bearer 1|7AkYegiATdC0mSrkFKnHOf3oG1lq97y5hstH9XbI37b3fc03"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

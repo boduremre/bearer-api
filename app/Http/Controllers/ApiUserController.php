@@ -36,7 +36,8 @@ class ApiUserController extends Controller
      */
     public function show(string $id)
     {
-        //
+        // Belirli bir kullanıcıyı ID'sine göre döndürür
+        return User::findOrFail($id);
     }
 
     /**

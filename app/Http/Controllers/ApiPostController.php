@@ -19,14 +19,6 @@ class ApiPostController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
      * Store a newly created resource in storage.
      */
     public function store(StorePostRequest $request)
@@ -51,14 +43,6 @@ class ApiPostController extends Controller
     {
         // İlişkili kullanıcı bilgisiyle birlikte tek bir post döner
         return response()->json($post->load('user'));
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Post $post)
-    {
-        //
     }
 
     /**

@@ -10,10 +10,15 @@ use App\Http\Controllers\ApiUserController;
 Route::post('/register', [ApiAuthController::class, 'register']);
 Route::post('/login', [ApiAuthController::class, 'login']);
 
-
+// Tüm post işlemleri için tek satır yeterli (index, store, show, update, destroy)
+Route::apiResource('posts', ApiPostController::class);
 
 // Korumalı Rotalar (Bearer Token Gerektirir)
 Route::middleware('auth:sanctum')->group(function () {
+
+    // Tüm user işlemleri için tek satır yeterli (index, store, show, update, destroy)
+    Route::apiResource('/users', ApiUserController::class);
+
     // Şifre güncelleme rotası    
     Route::post('/update-password', [ApiAuthController::class, 'update_password']);
 
@@ -36,10 +41,4 @@ Route::middleware('auth:sanctum')->group(function () {
             'user' => $request->user()
         ];
     });
-
-    // Tüm post işlemleri için tek satır yeterli (index, store, show, update, destroy)
-    Route::apiResource('posts', ApiPostController::class);
-
-    // Tüm user işlemleri için tek satır yeterli (index, store, show, update, destroy)
-    Route::apiResource('/users', ApiUserController::class);
 });
